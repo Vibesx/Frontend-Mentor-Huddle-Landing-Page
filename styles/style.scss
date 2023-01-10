@@ -1,0 +1,24 @@
+@import "./variables.scss";
+
+.body {
+    display: flex;
+    background-color: $pink;
+}
+
+.phone-container,
+.email-container {
+    display: flex;
+    justify-content: start;
+}
+
+.try-it-free-button {
+    border-radius: 50%;
+}
+
+.get-started-free-button {
+    border-radius: 50%;
+}
+
+.subscribe-button {
+    border-radius: 50%;
+}
