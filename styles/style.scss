@@ -1,24 +1,349 @@
 @import "./variables.scss";
 
-.body {
+body {
+    max-width: 841px;
+    margin: auto;
+    background-color: $very-pale-blue;
+}
+
+button {
+    border: 0;
+}
+
+.main-container {
+    font-size: 12px;
+    display: grid;
+    grid-template-columns: 20px 1fr 20px;
+    padding-top: 2rem;
+    background-color: white;
+}
+
+.header {
+    grid-column: 2 / 3;
     display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+.header-logo {
+    width: 160px;
+}
+
+.footer {
+    grid-column: 2 / 3;
+}
+
+.content-container {
+    grid-column: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.content-header {
+    text-align: center;
+    margin: 20px 0;
+    font-family: $poppins-font;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.content-description {
+    text-align: center;
+    margin: 20px 0;
+    font-family: $open-sans-font;
+    font-weight: 600;
+}
+
+.stats-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.statistic {
+    margin: 60px 0;
+    img {
+        width: 30px;
+    }
+    p:nth-of-type(1) {
+        font-family: $open-sans-font;
+        font-size: 70px;
+        font-weight: 700;
+    }
+    p:nth-of-type(2) {
+        font-family: $open-sans-font;
+        font-weight: 700;
+        font-size: 18px;
+        color: $pale-blue;
+    }
+}
+
+.screen-mockups-image {
+    margin: 60px 0;
+}
+
+.try-it-free-button {
+    border-radius: 20px;
+    border: 1px solid $pink;
+    color: $pink;
+    background-color: white;
+}
+
+.try-it-free-button-text {
+    font-family: $open-sans-font;
+    font-size: 14px;
+    margin: 20px;
+}
+
+.get-started-free-button {
+    width: 16rem;
+    height: 3rem;
+    font-family: $open-sans-font;
+    font-weight: 700;
+    font-size: 15px;
     background-color: $pink;
+    color: white;
+    border-radius: 1.5rem;
+    margin: 40px 0;
+    box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.25);
+    transition: background-color 0.24s ease;
+}
+
+.get-started-free-button-text {
+    padding: 20px;
+}
+
+.get-started-free-button:hover {
+    background-color: $light-pink;
+    cursor: pointer;
+}
+
+.descriptions-container {
+    grid-column: 1 / 4;
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin: 40px 0;
+}
+
+.description {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $very-pale-blue;
+    width: 100%;
+    margin: 200px 0;
+}
+
+.description:nth-of-type(even) {
+    background-color: white;
+}
+
+.curved-top {
+    position: absolute;
+    width: 100%;
+    bottom: 100%;
+}
+
+.curved-bottom {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+}
+
+.description-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px 40px;
+}
+
+.description-image {
+    width: 80%;
+    margin: 60px 0;
+}
+
+.descriptions-header {
+    font-family: $poppins-font;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+.descriptions-text {
+    font-family: $open-sans-font;
+    font-weight: 600;
+    margin-bottom: 60px;
+}
+
+.footer {
+    position: relative;
+    background-color: $very-dark-cyan;
+    color: white;
+    grid-column: 1 / 4;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.newsletter-form-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.subscribe-button {
+    align-self: flex-end;
+    border-radius: 8px;
+    width: 12rem;
+    height: 3rem;
+    font-family: $open-sans-font;
+    font-weight: 700;
+    font-size: 15px;
+    background-color: $pink;
+    color: white;
+    margin: 20px 0 40px 0;
+    transition: background-color 0.24s ease;
+}
+
+.subscribe-button:hover {
+    background-color: $light-pink;
+    cursor: pointer;
+}
+
+.newsletter-email {
+    width: 100%;
+    display: block;
+    height: 40px;
+    border-radius: 5px;
+    border: 0;
+    padding: 10px;
+}
+
+.newsletter-header {
+    font-family: $open-sans-font;
+    font-weight: 700;
+    font-size: 28px;
+    margin: 20px 0;
+}
+
+.newsletter-text {
+    font-family: $open-sans-font;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    width: 50%;
+    margin: 20px 0;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
 }
 
 .phone-container,
 .email-container {
     display: flex;
     justify-content: start;
+    margin: 10px 0;
+    font-family: $open-sans-font;
+    font-weight: 400;
+    p {
+        margin: 0 20px;
+    }
 }
 
-.try-it-free-button {
-    border-radius: 50%;
+.social-media {
+    display: flex;
 }
 
-.get-started-free-button {
-    border-radius: 50%;
+.social-media-icon {
+    width: 24px;
 }
 
-.subscribe-button {
-    border-radius: 50%;
+.social-media-icon:hover {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.social-media-icon-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.social-media-container-icon {
+    position: relative;
+    margin: 40px 20px 0 0;
+    cursor: pointer;
+}
+
+.social-media-container-icon:hover .social-media-icon-hover {
+    opacity: 1;
+}
+
+// .social-media-container-icon {
+//     margin: 40px 20px 0 0;
+// }
+
+// .social-media-container-icon:hover {
+//     background-image: url('/images/icons8-facebook-white.svg');
+//     transition: background-image 0.3s ease-in-out;
+// }
+
+@media screen and (min-width: 376px) {
+    .main-container {
+        font-size: 16px;
+    }
+
+    .stats-container {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .footer-container {
+        flex-direction: row;
+        padding: 40px 80px;
+    }
+
+    .contact-container {
+        font-size: 10px;
+    }
+
+    .newsletter-container {
+        font-size: 10px;
+        order: 1;
+    }
+
+    .newsletter-form-input {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .newsletter-email {
+        font-size: 18px;
+        margin-right: 20px;
+        flex: 2;
+    }
+
+    .subscribe-button {
+        margin: 0 0 0 20px;
+        height: 40px;
+        flex: 1;
+        font-size: 12px;
+    }
 }
